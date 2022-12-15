@@ -7,6 +7,31 @@
     --secondary-text-color: #ffffff;
   }
   
+    /* Reset */
+  
+    .list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+        img {
+          display: block;
+          max-width: 100%;
+          height: auto;
+        }
+
   .visually-hidden {
     position: absolute;
     width: 1px;
@@ -25,7 +50,8 @@
   padding - внутренний отступ
   clip- обрезка
    */
-  
+
+    
   body {
     background-color: var(--primary-background-color);
     color: var(--primary-text-color);
@@ -37,6 +63,16 @@
   font-size - розмер шрифта
   */
 
+    .container {
+      width: 1158px;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+  
+    .section {
+      padding: 120px 0;
+    }
+
   .list {
     list-style: none;
   }
@@ -45,6 +81,9 @@
   /* Logo */
   
   .logo {
+    display: inline-block;
+      margin-right: 77px;
+
     color: var(--dark);
     font-family: Raleway, sans-serif;
     text-decoration: none;
@@ -63,6 +102,17 @@
   }
   
   /*  HEADER */
+     .page-header {
+       box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+     }
+  
+     .page-header>.container,
+     .main-nav {
+       display: flex;
+       align-items: center;
+     }
+
+     
   
   /* Navigation menu */
   
@@ -90,11 +140,39 @@
   .nav-link .link:active {
     color: var(--primary-brand);
   }
+
+    .site-nav {
+      display: flex;
+    }
+  
+    .site-nav>.item:not(:last-child) {
+      margin-right: 40px;
+    }
+
+        .site-nav .link {
+          display: block;
+          padding: 24px 0;
+        }
   
   /* Contacts */
 
+    .contacts {
+      display: flex;
+      margin-left: auto;
+      
+    }
+  
+    .contacts>.item:not(:last-child) {
+      margin-right: 40px;
+    }
+
   .address{
 font-style: normal;
+}
+
+.contact {
+  display: block;
+  padding: 24px 0;
 }
   
   .contact-link {
@@ -115,8 +193,13 @@ font-style: normal;
   
   /* Hero */
 
+    .hero {
+      padding: 192px 0;
+    }
+
   .hero-title {
     /* temporary background color because text color is white */
+    margin: 0 auto 48px;
     background-color: #2e2f42;
     color: var(--secondary-text-color);
     font-weight: 500;
@@ -129,6 +212,11 @@ font-style: normal;
   /*text-align - расположение тескта на странице(лево/центр/право)  */
   
   .btn {
+    display: inline-block;
+      padding: 16px 32px;
+      border-radius: 4px;
+      border-style: none;
+
     color: var(--secondary-text-color);
     background-color: var(--primary-brand);
     font-family: inherit;
@@ -159,6 +247,7 @@ font-style: normal;
   /* Sections - General styles */
   
   .section-title {
+    margin-bottom: 72px;
     color: var(--dark);
     font-weight: 500;
     font-size: 36px;
@@ -170,6 +259,8 @@ font-style: normal;
   
   .advantage-title,
   .name {
+     margin-bottom: 8px;
+     
     color: var(--dark);
     font-weight: 600;
     font-size: 20px;
@@ -186,6 +277,19 @@ font-style: normal;
   .team {
     background-color: #f4f4fd;
   }
+
+    .advantages-title .list,
+    .products .list,
+    .team .list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: calc(-1 * var(--primary-margin-btwn-items));
+    }
+
+        .advantages-title .item {
+          flex-basis: calc(100% / 4 - var(--primary-margin-btwn-items));
+          margin-left: var(--primary-margin-btwn-items);
+        }
   
   /* PORTFOLIO.HTML */
   /* MAIN CONTENT */
@@ -193,6 +297,11 @@ font-style: normal;
   /* Filter button */
   
   .filter-btn {
+    display: inline-block;
+      padding: 8px 16px;
+      border: 1px solid #e7e9fc;
+      border-radius: 4px;
+
     color: var(--primary-brand);
     font-family: inherit;
     font-weight: 600;
@@ -216,6 +325,30 @@ font-style: normal;
   }
   
   /* Portfolio items */
+
+    .portfolio {
+      padding-top: 96px;
+    }
+      .work-examples {
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: calc(-1 * var(--primary-margin-btwn-items));
+          margin-top: calc(-2 * var(--primary-margin-btwn-items));
+        }
+      
+        .work-examples>.item {
+          flex-basis: calc(100% / 3 - var(--primary-margin-btwn-items));
+          margin-left: var(--primary-margin-btwn-items);
+          margin-top: calc(2 * var(--primary-margin-btwn-items));
+      
+          box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+        }
+      
+        .example-description {
+          padding: 32px 0 32px 16px;
+          border: 0.5px solid #f4f4fd;
+          border-top: none;
+        }
   
   .portfolio-link {
     color: inherit;
@@ -225,6 +358,8 @@ font-style: normal;
   }
   
   .project-name {
+    margin-bottom: 8px;
+    
     color: var(--dark);
     font-weight: 600;
     font-size: 20px;
@@ -232,7 +367,7 @@ font-style: normal;
     letter-spacing: 0.02em;
   }
 
-  .project-type{
+  .project-type {
       width: 30px;
       height: 24px;
     
@@ -242,15 +377,40 @@ font-style: normal;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0.02em;
+}
+
+      .item {
+          flex-basis: calc(100% / 3 - var(--primary-margin-btwn-items));
+          margin-left: var(--primary-margin-btwn-items);
+      
+          border: 1px solid #e7e9fc;
+      }
+
+  .team .item {
+ flex-basis: calc(100% / 4 - var(--primary-margin-btwn-items));
+margin-left: var(--primary-margin-btwn-items);
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+border-radius: 0px 0px 4px 4px;
+  }
+ 
+      .team .item-description {
+              text-align: center;
+              padding: 32px 16px;
+              border-radius: 0px 0px 4px 4px;
+          
+              background-color: var(--primary-background-color);
+            }
       
       /* identical to box height, or 150% */
     
       letter-spacing: 0.02em;
-  }
+  
   
   /* FOOTER */
   .footer {
     background-color: var(--dark);
+    padding: 100px 0;
+      
   }
   
   .footer .logo,

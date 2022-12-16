@@ -116,10 +116,12 @@ html{
  .page-header > .container,
  .main-nav {
     display: flex;
+  
     align-items: center;
      }
 .site-nav {
   display: flex;
+  
 }
 
 .site-nav>.item:not(:last-child) {

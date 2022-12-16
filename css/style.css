@@ -1,4 +1,11 @@
-
+html{
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
+}
 :root {
     --primary-background-color: #ffffff;
     --primary-brand: #4d5ae5;
@@ -63,18 +70,18 @@
   font-size - розмер шрифта
   */
 
-    .container {
-      width: 1158px;
-      padding: 0 15px;
-      margin: 0 auto;
+ .container {
+    width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
     }
   
-    .section {
-      padding: 120px 0;
+  .section {
+    padding: 120px 0;
     }
 
   .list {
-    list-style: none;
+   list-style: none;
   }
   /* list-style - вид маркером/нумерации или ее отсутствие */
   
@@ -102,14 +109,14 @@
   }
   
   /*  HEADER */
-     .page-header {
-       box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  .page-header {
+     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
      }
   
-     .page-header > .container,
-     .main-nav {
-       display: flex;
-       align-items: center;
+ .page-header > .container,
+ .main-nav {
+    display: flex;
+    align-items: center;
      }
 .site-nav {
   display: flex;
@@ -201,10 +208,14 @@ font-style: normal;
 
     .hero {
       padding: 192px 0;
+
+      background-color: var(--dark);
+      text-align: center;
     }
 
   .hero-title {
     /* temporary background color because text color is white */
+    width: 492px;
     margin: 0 auto 48px;
     background-color: #2e2f42;
     color: var(--secondary-text-color);
@@ -285,17 +296,17 @@ font-style: normal;
     background-color: #f4f4fd;
   }
 
-    .advantages-title .list,
-    .products .list,
-    .team .list {
-      display: flex;
-      flex-wrap: wrap;
-      margin-left: calc(-1 * var(--primary-margin-btwn-items));
+ .advantages-title .list,
+ .products .list,
+ .team .list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--primary-margin-btwn-items));
     }
 
-        .advantages-title .item {
-          flex-basis: calc(100% / 4 - var(--primary-margin-btwn-items));
-          margin-left: var(--primary-margin-btwn-items);
+  .advantages-title .item {
+      flex-basis: calc(100% / 4 - var(--primary-margin-btwn-items));
+      margin-left: var(--primary-margin-btwn-items);
         }
   
   /* PORTFOLIO.HTML */
@@ -409,12 +420,11 @@ border-radius: 0px 0px 4px 4px;
             }
       
       /* identical to box height, or 150% */
-    
-      letter-spacing: 0.02em;
   
   
   /* FOOTER */
-  .footer {
+
+  .footer{
     background-color: var(--dark);
     padding: 100px 0;
       

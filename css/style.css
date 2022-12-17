@@ -298,6 +298,8 @@ font-style: normal;
     line-height: 1.2;
     letter-spacing: 0.02em;
   }
+
+  
   
   .advantage-description,
   .position {
@@ -317,8 +319,13 @@ font-style: normal;
     gap: 24px;
     }
 
+ .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
   .advantages-title .item {
-      flex-basis: calc(100% / 4 - var(--primary-margin-btwn-items));
       margin-left: var(--primary-margin-btwn-items);  
       padding-bottom: 0;
         }
@@ -327,14 +334,13 @@ font-style: normal;
   /* MAIN CONTENT */
 
     .item {
-      flex-basis: calc(100% / 3 - var(--primary-margin-btwn-items));
+     
       margin-left: var(--primary-margin-btwn-items);
   
 
     }
   
-    .team .item {
-      flex-basis: calc(100% / 4 - var(--primary-margin-btwn-items));
+    .team .item {    
       margin-left: var(--primary-margin-btwn-items);
       box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
       border-radius: 0px 0px 4px 4px;
@@ -391,7 +397,6 @@ font-style: normal;
         }
       
         .work-examples>.item {
-          flex-basis: calc(100% / 3 - var(--primary-margin-btwn-items));
           margin-left: var(--primary-margin-btwn-items);
           margin-top: calc(2 * var(--primary-margin-btwn-items));
       

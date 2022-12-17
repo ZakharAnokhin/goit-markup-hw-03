@@ -116,9 +116,10 @@ html{
  .page-header > .container,
  .main-nav {
     display: flex;
-  
     align-items: center;
+    margin-right: auto;
      }
+
 .site-nav {
   display: flex;
   
@@ -193,7 +194,7 @@ font-style: normal;
   .contact-link {
     display: block;
     padding: 24px 0;
-
+    margin-left: auto;    
 
     color: inherit;
     text-decoration: none;
@@ -221,8 +222,9 @@ font-style: normal;
 
   .hero-title {
     /* temporary background color because text color is white */
-    width: 492px;
-    margin: 0 auto 48px;
+    /* width: 492px;
+    margin: 0 auto 48px; */
+
     background-color: #2e2f42;
     color: var(--secondary-text-color);
     font-weight: 500;
@@ -273,12 +275,17 @@ font-style: normal;
     margin-bottom: 72px;
     
     color: var(--dark);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 36px;
     line-height: 1.11;
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+  }
+
+  .advantages-list{
+    display: flex;
+    gap: 24px;
   }
   
   .advantage-title,
@@ -307,16 +314,39 @@ font-style: normal;
  .team .list {
     display: flex;
     flex-wrap: wrap;
-    margin-left: calc(-1 * var(--primary-margin-btwn-items));
+    gap: 24px;
     }
 
   .advantages-title .item {
       flex-basis: calc(100% / 4 - var(--primary-margin-btwn-items));
-      margin-left: var(--primary-margin-btwn-items);
+      margin-left: var(--primary-margin-btwn-items);  
+      padding-bottom: 0;
         }
   
   /* PORTFOLIO.HTML */
   /* MAIN CONTENT */
+
+    .item {
+      flex-basis: calc(100% / 3 - var(--primary-margin-btwn-items));
+      margin-left: var(--primary-margin-btwn-items);
+  
+
+    }
+  
+    .team .item {
+      flex-basis: calc(100% / 4 - var(--primary-margin-btwn-items));
+      margin-left: var(--primary-margin-btwn-items);
+      box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+      border-radius: 0px 0px 4px 4px;
+    }
+  
+    .team .item-description {
+      text-align: center;
+      padding: 32px 16px;
+      border-radius: 0px 0px 4px 4px;
+  
+      background-color: var(--primary-background-color);
+    }
   
   /* Filter button */
   
@@ -403,28 +433,6 @@ font-style: normal;
       letter-spacing: 0.02em;
 }
 
-      .item {
-          flex-basis: calc(100% / 3 - var(--primary-margin-btwn-items));
-          margin-left: var(--primary-margin-btwn-items);
-      
-          border: 1px solid #e7e9fc;
-      }
-
-  .team .item {
- flex-basis: calc(100% / 4 - var(--primary-margin-btwn-items));
-margin-left: var(--primary-margin-btwn-items);
-box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-border-radius: 0px 0px 4px 4px;
-  }
- 
-      .team .item-description {
-              text-align: center;
-              padding: 32px 16px;
-              border-radius: 0px 0px 4px 4px;
-          
-              background-color: var(--primary-background-color);
-            }
-      
       /* identical to box height, or 150% */
   
   
@@ -438,10 +446,14 @@ border-radius: 0px 0px 4px 4px;
   
   .footer .logo,
   .footer-descriptoin {
+    display: block;
     color: var(--secondary-text-color);
+    margin-right: 0;
+    margin-bottom: 16px ;
   }
   
   .footer-descriptoin {
+    width: 264px;
     line-height: 1.5;
     letter-spacing: 0.02em;
   }

@@ -78,7 +78,6 @@ html{
   
   .section {
     padding: 120px 0px;
-    padding-bottom: 0px;
     }
 
   .list {
@@ -303,7 +302,9 @@ font-style: normal;
     letter-spacing: 0.02em;
   }
 
-  
+  .advantages{
+    padding-bottom: 0px;
+  }
   
   .advantage-description,
   .position {
@@ -391,6 +392,8 @@ font-style: normal;
   /* Portfolio items */
 
   .button-list{
+    padding: 0px;
+    margin-top: 0px;
 display: flex;
 gap: 24px;
 justify-content: center;
@@ -403,7 +406,6 @@ list-style: none;
 
     .portfolio {
       padding-top: 96px;
-      padding-bottom: 120px;
     }
       .work-examples {
           display: flex;
@@ -445,15 +447,10 @@ list-style: none;
   }
 
   .project-type {
-      width: 30px;
-      height: 24px;
-    
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 400;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0.02em;
+      line-height: 1.5;
 }
 
       /* identical to box height, or 150% */
